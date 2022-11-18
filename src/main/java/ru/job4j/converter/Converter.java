@@ -32,17 +32,42 @@ public class Converter {
     }
 
     public static void main(String[] args) {
-        float euroInRubles = Converter.rubleToEuro(140);
-        System.out.println("140 rubles are " + euroInRubles + " euro.");
-        float dollarInRubles = Converter.rubleToDollar(120);
-        System.out.println("120 rubles are " + dollarInRubles + " dollar.");
-        float euroInRuble = Converter.euroToRuble(2);
-        System.out.println("2 euros are " + euroInRuble + " ruble.");
-        float dollarInRuble = Converter.dollarToRuble(2);
-        System.out.println("2 dollars are " + dollarInRuble + " ruble.");
-        float dollarInEuro = Converter.dollarToEuro(42);
-        System.out.println("42 dollars are " + dollarInEuro + " euro.");
-        float euroInDollar = Converter.euroToDollar(42);
-        System.out.println("42 euros are " + euroInDollar + " dollar.");
+
+        float in1 = 140;
+        float expected1 = 2;
+        float out1 = Converter.rubleToEuro(in1);
+        boolean passed1 = expected1 == out1;
+        System.out.println("140 rubles are 2 euros. Test result : " + passed1);
+
+        float in2 = 120;
+        float expected2 = 2;
+        float out2 = Converter.rubleToDollar(in2);
+        boolean passed2 = expected2 == out2;
+        System.out.println("120 rubles are 2 dollars. Test result : " + passed2);
+
+        float in3 = 2;
+        float expected3 = 140;
+        float out3 = Converter.euroToRuble(in3);
+        boolean passed3 = expected3 == out3;
+        System.out.println("2 euros are 140 rubles. Test result : " + passed3);
+
+        float in4 = 2;
+        float expected4 = 120;
+        float out4 = Converter.dollarToRuble(in4);
+        boolean passed4 = expected4 == out4;
+        System.out.println("2 dollars are 120 rubles. Test result : " + passed4);
+
+        float in5 = 100;
+        float expected5 = 86;
+        float out5 = Converter.dollarToEuro(in5);
+        boolean passed5 = expected5 == out5;
+        System.out.println("100 dollars are 86 euros. Test result : " + passed5);
+
+        float in6 = 100;
+        float expected6 = 116;
+        float out6 = Converter.euroToDollar(in6);
+        boolean passed6 = expected6 == out6;
+        System.out.println("100 euros are 116 dollars. Test result : " + passed6);
+
     }
 }
