@@ -22,12 +22,12 @@ public class Converter {
     }
 
     public static float dollarToEuro(float value) {
-        float rsl = value * 60 / 70;
+        float rsl = value * 0.86F;
         return rsl;
     }
 
     public static float euroToDollar(float value) {
-        float rsl = value * 70 / 60;
+        float rsl = value * 1.16F;
         return rsl;
     }
 
