@@ -68,6 +68,5 @@ public class Converter {
         out = Converter.euroToDollar(in);
         passed = expected == out;
         System.out.println("100 euros are 116 dollars. Test result : " + passed);
-
     }
 }
