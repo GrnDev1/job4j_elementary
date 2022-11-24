@@ -51,9 +51,9 @@ public class ConverterTest {
     }
 
     @Test
-    public void whenConvert86EuroThen100Dollar() {
-        float in = 86;
-        float expected = 99.76F;
+    public void whenConvert100EuroThen116Dollar() {
+        float in = 100;
+        float expected = 116;
         float out = Converter.euroToDollar(in);
         float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
