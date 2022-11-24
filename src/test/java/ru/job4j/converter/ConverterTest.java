@@ -10,7 +10,7 @@ public class ConverterTest {
      float in = 140;
      float expected = 2;
      float out = Converter.rubleToEuro(in);
-     float eps = 0.1f;
+     float eps = 0.0001f;
      Assert.assertEquals(expected, out, eps);
     }
 
@@ -28,7 +28,7 @@ public class ConverterTest {
         float in = 2;
         float expected = 140;
         float out = Converter.euroToRuble(in);
-        float eps = 0.1f;
+        float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
     }
 
@@ -37,7 +37,7 @@ public class ConverterTest {
         float in = 2;
         float expected = 120;
         float out = Converter.dollarToRuble(in);
-        float eps = 0.1f;
+        float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
     }
 
@@ -46,16 +46,16 @@ public class ConverterTest {
         float in = 100;
         float expected = 86;
         float out = Converter.dollarToEuro(in);
-        float eps = 0.1f;
+        float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
     }
 
     @Test
     public void whenConvert86EuroThen100Dollar() {
         float in = 86;
-        float expected = 100;
+        float expected = 99.76F;
         float out = Converter.euroToDollar(in);
-        float eps = 0.3f;
+        float eps = 0.0001f;
         Assert.assertEquals(expected, out, eps);
     }
 }
