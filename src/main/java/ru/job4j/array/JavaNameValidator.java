@@ -2,21 +2,17 @@ package ru.job4j.array;
 
 public class JavaNameValidator {
     public static boolean isNameValid(String name) {
-        char[] array = name.toCharArray();
         if (name.isEmpty() || !isLowerLatinLetter(name.codePointAt(0))) {
             return false;
         }
-        for (int i = 0; i < name.length(); i++) {
-            if (
-                    Character.isDigit(array[i])
-                            || isSpecialSymbol(name.codePointAt(i))
-                            || isUpperLatinLetter(name.codePointAt(i))
-                            || isLowerLatinLetter(name.codePointAt(i))
-            ) {
-                return true;
+        for (int i = 1; i < name.length(); i++) {
+            int code = name.codePointAt(i);
+            if (!Character.isDigit(code) && !isSpecialSymbol(code)
+                    && !isUpperLatinLetter(code) && !isLowerLatinLetter(code)) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static boolean isSpecialSymbol(int code) {
