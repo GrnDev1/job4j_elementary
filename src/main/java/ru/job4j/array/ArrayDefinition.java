@@ -9,7 +9,6 @@ public class ArrayDefinition {
         System.out.println(surnames.length);
         System.out.println(prices.length);
         System.out.println();
-
         String[] names = new String[4];
         names[0] = "Roman";
         names[1] = "Petr";

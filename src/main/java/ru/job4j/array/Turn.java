@@ -12,15 +12,15 @@ public class Turn {
 
     public static void main(String[] args) {
         int[] array = new int[]{1, 2, 3, 4, 5, 6, 7};
-        for (int s : array
+        for (int current : array
              ) {
-            System.out.print(s + " ");
+            System.out.print(current + " ");
         }
         System.out.println();
         back(array);
-        for (int s : array
+        for (int current : array
         ) {
-            System.out.print(s + " ");
+            System.out.print(current + " ");
         }
     }
 }
