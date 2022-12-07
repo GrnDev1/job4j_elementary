@@ -36,4 +36,12 @@ public class PointTest {
         double expected = 3;
         assertThat(a.distance(b)).isEqualTo(expected);
     }
+
+    @Test
+    public void when004To030ToThen5() {
+        Point a = new Point(0, 0, 4);
+        Point b = new Point(0, 3, 0);
+        double expected = 5;
+        assertThat(a.distance3d(b)).isEqualTo(expected);
+    }
 }
